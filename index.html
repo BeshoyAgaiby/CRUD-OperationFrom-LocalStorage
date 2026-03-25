@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="CSS/bootstrap.min.css">
+   <link rel="stylesheet" href="webfonts">
+    <title>Javascript</title>
+</head>
+<body>
+    <!--inputs -->
+    <div class=" w-75 py-4 mx-auto">
+        <h2 class="fw-bold py-3">Product Management System</h2>
+
+        <label for="productNameInput">ProductName</label>
+        <input type="text" oninput="validateProduct();" class=" form-control  mb-2 mt-2" id="productNameInput">
+
+         <label for="productPriceInput">productPrice</label>
+        <input type="number" class="form-control mb-2 mt-2" id="productPriceInput">
+
+         <label for="productCategoryInput">ProductCategory</label>
+        <input type="text" class="form-control mb-2 mt-2" id="productCategoryInput">
+
+         <label for="productDescriptionInput">ProductDescription</label>
+        <textarea type="text" class="form-control mb-2 mt-2" id="productDescriptionInput"></textarea>
+
+        <button  class="btn btn-sm btn-outline-info bg-info text-light " id="addItem">Add Product</button>
+        <button id="updateBtn" onclick="updateProduct()" class="btn btn-sm btn-outline-info bg-info text-light d-none ">Update</button>
+
+    </div>
+
+ <div class="w-75  py-4 mx-auto">
+    <input type="text" oninput="searchProducts(this.value) ;" class="form-control w-25" placeholder="searchInput" id="search">
+
+
+ </div>
+
+    <table class="table w-75 mx-auto">
+   <thead>
+    <th>index</th>
+    <th>productName</th>
+    <th>productPrice</th>
+    <th>productcategory</th>
+    <th>productDescription</th>
+    <th>update</th>
+    <th>delete</th>
+   </thead>
+  <tbody id="tableBody">
+  <!-- display شغل الجافا في هنا-->
+
+  </tbody>
+
+
+
+    </table>
+
+
+
+        <script src="main.js"></script>
+
+</body>
+</html>
